@@ -1,6 +1,6 @@
 {
   "Copyparty": {
-    "description": "Copyparty is a lightweight file sharing hub with accelerated resumable uploads, deduplication, WebDAV, zeroconf, a media indexer, image/audio/video thumbnails and audio transcoding. It is served over a single HTTP port and needs no client software beyond a web browser.<p>The container runs as the owner and group of the config Share, so that account must have read and write access to every Share mapped into the container.</p><p>Note: You must add a config file (copyparty.conf) to your copyparty Config [e.g. copyparty-config] Share. <a href='https://github.com/9001/copyparty/blob/hovudstraum/docs/examples/docker/basic-docker-compose/copyparty.conf' target='_blank'>Example</a>.</p><p>Based on the <a href='https://hub.docker.com/r/copyparty/ac' target='_blank'>official OCI image</a>, available for amd64 and arm64 architecture.</p>",
+    "description": "Copyparty is a lightweight file sharing hub with accelerated resumable uploads, deduplication, WebDAV, zeroconf, a media indexer, image/audio/video thumbnails and audio transcoding. It is served over a single HTTP port and needs no client software beyond a web browser.<p>The container runs as the owner and group of the config Share, so that account must have read and write access to every Share mapped into the container.</p><p>Note: You must add a config file (copyparty.conf) to your copyparty Config [e.g. copyparty-config] Share. <a href='https://github.com/9001/copyparty/blob/hovudstraum/docs/examples/docker/basic-docker-compose/copyparty.conf' target='_blank'>Example</a>.</p><p>Based on the <a href='https://hub.docker.com/r/copyparty/ac' target='_blank'>official OCI image</a>, available for amd64 and arm64 architecture. Rockstor V5.5.0 or later.</p>",
     "version": "1.0",
     "website": "https://github.com/9001/copyparty",
     "icon": "https://raw.githubusercontent.com/9001/copyparty/hovudstraum/docs/logo.svg",
@@ -25,11 +25,11 @@
         },
         "volumes": {
           "/cfg": {
-            "description": "Copyparty configuration files.",
+            "description": "Copyparty configuration files (copyparty:copyparty).",
             "label": "Config Storage [e.g. copyparty-config]"
           },
           "/w": {
-            "description": "The root of the shared file tree.",
+            "description": "The root of the shared file tree (copyparty:copyparty).",
             "label": "Data Storage [e.g. copyparty-data]"
           }
         },
